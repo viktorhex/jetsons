@@ -6,10 +6,12 @@ https://developer.nvidia.com/embedded/jetpack
 # ^ download image from here ASAP, it is 11GB zipped and can take 40-60min
 
 ```sh
-# [dd method]
+# dd method..
+#  NOTE: balena etcher has validation step and dcfldd is like dd with hashing features
+
+# Why skip: validation is slow
 
 # ensure system has enough memory to download and unzip image ...
-
 # insert sd card adapter & micro sd, ensure sd card adapter write protect switch is set to off
 
 sudo dmesg | tail | awk '$3 == "sd" {print}'
