@@ -6,6 +6,8 @@ https://developer.nvidia.com/embedded/jetpack
 # ^ download image from here ASAP, it is 11GB zipped and can take 40-60min
 
 ```sh
+# [dd method]
+
 # ensure system has enough memory to download and unzip image ...
 
 # insert sd card adapter & micro sd, ensure sd card adapter write protect switch is set to off
