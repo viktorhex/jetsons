@@ -3,12 +3,9 @@ https://developer.nvidia.com/embedded/learn/jetson-orin-nano-devkit-user-guide/s
 https://developer.nvidia.com/embedded/learn/get-started-jetson-orin-nano-devkit#write
 
 https://developer.nvidia.com/embedded/jetpack
-# ^ download image from here ASAP, it is 11GB zipped and can take 40-60min
-
 ```sh
 # dd method..
 #  NOTE: balena etcher has validation step and dcfldd is like dd with hashing features
-
 # Why skip: validation is slow
 
 # ensure system has enough memory to download and unzip image ...
@@ -29,7 +26,8 @@ sudo dmesg | tail | awk '$3 == "sd" {print}'
 sudo umount /dev/sda # replace sda with where-ever device is attached, sdX
 
 # check downloaded file name and /dev/sdX location
-sudo /usr/bin/unzip -p ~/Downloads/jp61-orin-nano-sd-card-image.zip | sudo /bin/dd of=/dev/sda bs=1M status=progress
+sudo /usr/bin/unzip -p ~/Downloads/jp62-orin-nano-sd-card-image.zip | sudo /bin/dd of=/dev/sda bs=1M status=progress
+# You will see output like:
 # ... ... 590282752 bytes (590 MB, 563 MiB) copied, 23 s, 25.7 MB/s ... ...
 
 # check /dev/sdX location
